@@ -1,0 +1,13 @@
+diff --git a/node_modules/three-stdlib/libs/lottie.js b/node_modules/three-stdlib/libs/lottie.js
+index 9ade8c1..c90e4d9 100644
+--- a/node_modules/three-stdlib/libs/lottie.js
++++ b/node_modules/three-stdlib/libs/lottie.js
+@@ -13059,7 +13059,7 @@ const lottie = (() => {
+       var valueAtTime;
+       var velocityAtTime;
+       var scoped_bm_rt;
+-      var expression_function = eval("[function _expression_function(){" + val + ";scoped_bm_rt=$bm_rt}]")[0];
++      var expression_function = new Function("val", "scoped_bm_rt", "return " + "[function _expression_function(){" + val + ";scoped_bm_rt=$bm_rt}]")[0];
+       var numKeys = property.kf ? data.k.length : 0;
+       var active = !this.data || this.data.hd !== true;
+       var wiggle = function wiggle2(freq, amp) {
