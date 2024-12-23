@@ -5,7 +5,7 @@ import Highlights from "./components/Highlights";
 import HowItWorks from "./components/HowItWorks";
 import Model from "./components/Model";
 import Navbar from "./components/Navbar";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 export default function App() {
   return (
     <main className="bg-black">
@@ -16,6 +16,7 @@ export default function App() {
       <Features />
       <HowItWorks />
       <Footer />
+      <SpeedInsights/>
     </main>
   );
 }
