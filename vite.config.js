@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+          // Split vendor libraries into a separate chunk
           vendor: [
             "react",
             "react-dom",
@@ -17,6 +18,15 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1500, // Increase the limit (in KB) to suppress the warning
+    chunkSizeWarningLimit: 1500, // Suppress chunk size warning (increase limit in KB)
+    commonjsOptions: {
+      ignoreDynamicRequires: true, // Suppress dynamic require warnings (temporary)
+    },
+  },
+  resolve: {
+    alias: {
+      // Optional: Alias any paths for cleaner imports
+      "@": "/src",
+    },
   },
 });
