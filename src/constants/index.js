@@ -5,6 +5,7 @@ import {
   highlightFourthVideo,
   highlightSecondVideo,
   highlightThirdVideo,
+  redImg,
   whiteImg,
   yellowImg,
 } from "../utils";
@@ -70,6 +71,12 @@ export const models = [
     title: "iPhone 15 Pro in Black Titanium",
     color: ["#454749", "#3b3b3b", "#181819"],
     img: blackImg,
+  },
+  {
+    id: 5,
+    title: "iPhone 15 Pro in Cherry Red Titanium",
+    color: ["#C21807", "#C21807", "#C21807"],
+    img: redImg,
   },
 ];
 
