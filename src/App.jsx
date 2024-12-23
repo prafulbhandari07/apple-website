@@ -6,6 +6,8 @@ import HowItWorks from "./components/HowItWorks";
 import Model from "./components/Model";
 import Navbar from "./components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App() {
   return (
     <main className="bg-black">
@@ -16,7 +18,8 @@ export default function App() {
       <Features />
       <HowItWorks />
       <Footer />
-      <SpeedInsights/>
+      <SpeedInsights />
+      <Analytics />
     </main>
   );
 }
