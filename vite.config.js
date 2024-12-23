@@ -1,7 +1,22 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: [
+            "react",
+            "react-dom",
+            "three",
+            "@react-three/fiber",
+            "@react-three/drei",
+          ],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1500, // Increase the limit (in KB) to suppress the warning
+  },
+});
